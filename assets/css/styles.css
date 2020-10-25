@@ -124,6 +124,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 10px;
 }
 
+.status-bars {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px;
+}
+
 
 @media (min-width: 768px) {
   .display-4 {font-size: 3rem;}

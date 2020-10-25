@@ -6,8 +6,7 @@
       <a class="p-2 text-muted" href="#">Quests</a>
       <a class="p-2 text-muted" href="#">Equipment</a>
       <a class="p-2 text-muted" href="#">Blacksmith</a>
-      <a class="p-2 text-muted" href="#">Settings</a>
+      <a class="p-2 text-muted" href="profile.php">Settings</a>
     </nav>
   </div>
-
 </div>

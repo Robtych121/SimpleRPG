@@ -10,7 +10,6 @@
       <div class="col-md-4 d-flex justify-content-end align-items-center">
         <?php
         if(IsLoggedIn() === true){
-            echo '<a class="btn btn-sm btn-outline-secondary nav-btn" href="profile.php">'. getUsernameDetail($_SESSION['user_id']) . '</a>';
             echo '<a class="btn btn-sm btn-outline-secondary nav-btn" href="logout.php">Logout</a>';
         } else {
             echo '<a class="btn btn-sm btn-outline-secondary nav-btn" href="login.php">Login</a>';
