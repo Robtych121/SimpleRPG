@@ -20,6 +20,9 @@ LoggedOutRedirect();
   </div>
     <div class="row">
         <div class="col-12">
+        <div class="message-box col-md-12">Make your move!</div>
+<div class="add-damage btn" type="button">Damage</div>
+<div class="add-heal btn" type="button">Heal</div>
             <p>Homepage</p>
             <?php
             if(IsLoggedIn() === true){
