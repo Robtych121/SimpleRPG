@@ -1,11 +1,12 @@
-$ = jQuery;
+// STATUS BARS 
+// HP Setup
 var maxHealth = 500,
-  curHealth = maxHealth;
+curHealth = maxHealth;
 $(".health-bar-text").html("100% - " + maxHealth + "/" + maxHealth);
-$(".health-bar").css({
-  "width": "100%"
-});
-$(".add-damage").click(function() {
+$(".health-bar").css({"width": "100%"});
+
+// Deals damage to the player
+function removeHealth() {
   if (curHealth == 0) {
     $('.message-box').html("Is this the end??");
   } else {
@@ -14,14 +15,15 @@ $(".add-damage").click(function() {
     curHealth = curHealth - damage;
     if (curHealth < 0) {
       curHealth = 0;
-      restart();
     } else {
       $('.message-box').html("You took " + damage + " points of damage!");
     }
     applyChange(curHealth);
   }
-});
-$(".add-heal").click(function() {
+};
+
+// Add Health Back to the player
+function addHealth() {
   if (curHealth == maxHealth) {
     $('.message-box').html("You are already at full health");
   } else {
@@ -38,7 +40,7 @@ $(".add-heal").click(function() {
     }
     applyChange(curHealth);
   }
-});
+};
 
 function applyChange(curHealth) {
   var a = curHealth * (100 / maxHealth);
@@ -52,10 +54,4 @@ function applyChange(curHealth) {
   $(".health-bar-blue").animate({
     'width': a + "%"
   }, 300);
-}
-
-function restart() {
-  //Was going to have a game over/restart function here. 
-  $('.health-bar-red, .health-bar');
-  $('.message-box').html("You've been knocked down! Thing's are looking bad.");
 }
