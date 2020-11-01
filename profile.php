@@ -6,6 +6,7 @@ include 'includes/templates/head.php';
 include 'includes/templates/topbar.php';
 include 'includes/templates/header.php';
 include 'includes/templates/nav.php';
+include 'includes/templates/statusbars.php';
 LoggedOutRedirect();
 ?>
 
