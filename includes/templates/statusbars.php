@@ -32,7 +32,12 @@
           <span id="en-percent"></span> - <span id="en-current"></span> / <span id="en-max"></span>
         </div>
       </div></div>
-    <div class="col-md-3">Gold</div>
+    <div class="col-md-3">
+    <span><b>Gold</b></span><br>
+    <div class="gold-box">
+        <div class="gold-bar-text"><?=getCharacterStats($_SESSION['user_id'], '9')?></div>
+      </div>
+    </div>
 </div>
 </div>
 

@@ -8,6 +8,7 @@
 # Type 6 = Current Experience
 # Type 7 = Current Level
 # Type 8 = Character ID
+# Type 9 = Gold
 function getCharacterStats($input, $type){
     include 'includes/config/db_connection.php';
 
@@ -89,6 +90,17 @@ function getCharacterStats($input, $type){
 
     if($type == '8'){
         $stmt = $conn->prepare('SELECT id FROM characters WHERE user_id =? AND active = 1 LIMIT 1');
+        $stmt -> bind_param('s', $input);
+        $stmt -> execute();
+        $stmt -> store_result();
+        $stmt -> bind_result($output);
+        $stmt -> fetch();
+        $stmt -> close();
+        return $output;
+    }
+
+    if($type == '9'){
+        $stmt = $conn->prepare('SELECT gold FROM characters WHERE user_id =? AND active = 1 LIMIT 1');
         $stmt -> bind_param('s', $input);
         $stmt -> execute();
         $stmt -> store_result();
