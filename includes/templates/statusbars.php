@@ -7,7 +7,7 @@
         <div class="exp-bar-blue"></div>
         <div class="exp-bar"></div>
         <div class="exp-bar-text">
-          <span id="exp-percent"></span> - <span id="exp-current"></span> / <span id="exp-max"></span>
+        <i class="fas fa-angle-double-up"></i> <span id="exp-percent"></span> - <span id="exp-current"></span> / <span id="exp-max"></span>
         </div>
       </div>
     </div>
@@ -18,7 +18,7 @@
         <div class="health-bar-blue"></div>
         <div class="health-bar"></div>
         <div class="health-bar-text">
-          <span id="hp-percent"></span> - <span id="hp-current"></span> / <span id="hp-max"></span>
+        <i class="fas fa-heart"></i> <span id="hp-percent"></span> - <span id="hp-current"></span> / <span id="hp-max"></span>
         </div>
       </div>
     </div>
@@ -29,13 +29,13 @@
         <div class="energy-bar-blue"></div>
         <div class="energy-bar"></div>
         <div class="energy-bar-text">
-          <span id="en-percent"></span> - <span id="en-current"></span> / <span id="en-max"></span>
+        <i class="fas fa-bolt"></i> <span id="en-percent"></span> - <span id="en-current"></span> / <span id="en-max"></span>
         </div>
       </div></div>
     <div class="col-md-3">
     <span><b>Gold</b></span><br>
     <div class="gold-box">
-        <div class="gold-bar-text"><?=getCharacterStats($_SESSION['user_id'], '9')?></div>
+     <div class="gold-bar-text"><i class="fas fa-coins"></i> <?=getCharacterStats($_SESSION['user_id'], '9')?></div>
       </div>
     </div>
 </div>
