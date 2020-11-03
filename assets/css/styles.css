@@ -164,17 +164,6 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 80px;
 }
 
-.message-box {
-  text-align: center;
-  padding: 5px;
-}
-
-.total,
-.message-box {
-  font-size: 16px;
-  margin: 5px;
-}
-
 .energy-box {
   background-color: #ccc;
   height: 30px;
