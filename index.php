@@ -14,7 +14,7 @@ LoggedOutRedirect();
 <div class="message-box"></div>
     <div class="row">
         <div class="col-12">
-          <p>Homepage</p>
+          <h3>Welcome <?=getCharacterStats($_SESSION['user_id'], '10')?></h3>
         </div>
     </div>
 </div>

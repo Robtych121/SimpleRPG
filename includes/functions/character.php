@@ -9,6 +9,7 @@
 # Type 7 = Current Level
 # Type 8 = Character ID
 # Type 9 = Gold
+# Type 10 = Name
 function getCharacterStats($input, $type){
     include 'includes/config/db_connection.php';
 
@@ -110,6 +111,16 @@ function getCharacterStats($input, $type){
         return $output;
     }
 
+    if($type == '10'){
+        $stmt = $conn->prepare('SELECT charname FROM characters WHERE user_id =? AND active = 1 LIMIT 1');
+        $stmt -> bind_param('s', $input);
+        $stmt -> execute();
+        $stmt -> store_result();
+        $stmt -> bind_result($output);
+        $stmt -> fetch();
+        $stmt -> close();
+        return $output;
+    }
 }
 
 function updateCharacter($char_id, $current_hp, $current_energy, $current_exp) {
