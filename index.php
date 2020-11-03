@@ -14,8 +14,16 @@ LoggedOutRedirect();
 <div class="message-box"></div>
     <div class="row">
         <div class="col-12">
-          <h3>Welcome <?=getCharacterStats($_SESSION['user_id'], '10')?></h3>
+          <h3 class="text-center">Welcome <?=getCharacterStats($_SESSION['user_id'], '10')?></h3>
         </div>
+    </div>
+    <div class="row">
+    <div class="col-6">
+      <h4 class="text-center">What do you want to do?</h4>
+    </div>
+    <div class="col-6">
+      <h4 class="text-center">Quests & Tasks</h4>
+    </div>
     </div>
 </div>
 <?php include 'includes/templates/footer.php';?>
